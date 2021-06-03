@@ -1,0 +1,6 @@
+framework module MovieeShared {
+    umbrella header "MovieeShared.h"
+
+    export *
+    module * { export * }
+}
