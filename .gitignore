@@ -9,6 +9,8 @@
 
 # Java class files
 *.class
+*.hprof
+.DS_Store
 
 # Generated files
 bin/
