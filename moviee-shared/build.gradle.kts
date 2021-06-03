@@ -18,18 +18,25 @@ kotlin {
             }
         }
     }
+    targets.all {
+        compilations.all {
+            kotlinOptions {
+                freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn")
+            }
+        }
+    }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
-        val androidMain by getting {
-            dependencies {
-                implementation("com.google.android.material:material:1.2.1")
-            }
-        }
+        val androidMain by getting
         val androidTest by getting {
             dependencies {
                 implementation("junit:junit:4.13")
