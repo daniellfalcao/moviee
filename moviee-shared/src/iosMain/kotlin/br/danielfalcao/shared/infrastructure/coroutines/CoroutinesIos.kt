@@ -1,4 +1,4 @@
-package br.danielfalcao.shared
+package br.danielfalcao.shared.infrastructure.coroutines
 
 import kotlinx.coroutines.*
 import platform.darwin.*

@@ -2,7 +2,7 @@ import SwiftUI
 import MovieeShared
 
 func greet() -> String {
-    return Greeting().greeting()
+    return "hey"
 }
 
 struct ContentView: View {
